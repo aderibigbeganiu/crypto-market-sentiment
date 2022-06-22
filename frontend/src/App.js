@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import logo from "./assets/logo.png";
+import logo from "./assets/logo.jpg";
 import { ConnectButton } from "web3uikit";
 import Coin from "./components/Coin/Coin";
 import { abouts } from "./components/Coin/about";
