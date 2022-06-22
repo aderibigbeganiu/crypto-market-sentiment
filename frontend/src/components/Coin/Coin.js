@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "web3uikit";
 import { useWeb3ExecuteFunction, useMoralis } from "react-moralis";
-import { Circle, Container, Token, Votes, Wave } from "./Coin.styled";
+import {
+  Circle,
+  Container,
+  Percentage,
+  Token,
+  Votes,
+  Wave,
+} from "./Coin.styled";
 
 const Coin = (props) => {
   const { perc, token, setModalToken, setVisible } = props;
@@ -62,7 +69,7 @@ const Coin = (props) => {
             backgroundColor: color,
           }}
         ></Wave>
-        <div className="percentage">{perc}%</div>
+        <Percentage>{perc}%</Percentage>
       </Circle>
       <Votes>
         <Button
