@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import logo from "./assets/logo.jpg";
 import { ConnectButton } from "web3uikit";
 import Coin from "./components/Coin/Coin";
 import { abouts } from "./components/Coin/about";
 import { useMoralisWeb3Api, useMoralis } from "react-moralis";
 import TokenModal from "./components/Modals/TokenModal";
+import {
+  HeaderStyle,
+  InstructionStyle,
+  ListStyle,
+  LogoStyle,
+} from "./App.styled";
 
 const App = () => {
   const [btc, setBtc] = useState();
@@ -68,16 +73,14 @@ const App = () => {
 
   return (
     <>
-      <div className="header">
-        <div className="logo">
-          <img src={logo} alt="logo" height={50} />
-        </div>
+      <HeaderStyle>
+        <LogoStyle src={logo} alt="logo" height={50} />
         <ConnectButton />
-      </div>
-      <div className="instructions">
+      </HeaderStyle>
+      <InstructionStyle>
         Where do you think this tokens are going? Up or Down?
-      </div>
-      <div className="list">
+      </InstructionStyle>
+      <ListStyle>
         <Coin
           perc={btc}
           token={"BTC"}
@@ -96,7 +99,7 @@ const App = () => {
           setModalToken={setModalToken}
           setVisible={setVisible}
         />
-      </div>
+      </ListStyle>
       <TokenModal
         visible={visible}
         modalPrice={modalPrice}
