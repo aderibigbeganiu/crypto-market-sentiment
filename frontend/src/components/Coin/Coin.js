@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./Coin.css";
 import { Button } from "web3uikit";
 import { useWeb3ExecuteFunction, useMoralis } from "react-moralis";
+import { Circle, Container, Token, Votes, Wave } from "./Coin.styled";
 
 const Coin = (props) => {
   const { perc, token, setModalToken, setVisible } = props;
@@ -52,20 +52,19 @@ const Coin = (props) => {
   }
 
   return (
-    <div style={{ marginBottom: "50px" }}>
-      <div className="token">{token}</div>
-      <div className="circle" style={{ boxShadow: `0 0 20px ${color}` }}>
-        <div
-          className="wave"
+    <Container>
+      <Token>{token}</Token>
+      <Circle style={{ boxShadow: `0 0 20px ${color}` }}>
+        <Wave
           style={{
             marginTop: `${100 - perc}%`,
             boxShadow: `0 0 20px ${color}`,
             backgroundColor: color,
           }}
-        ></div>
+        ></Wave>
         <div className="percentage">{perc}%</div>
-      </div>
-      <div className="votes">
+      </Circle>
+      <Votes>
         <Button
           onClick={() => {
             if (isAuthenticated) {
@@ -91,8 +90,8 @@ const Coin = (props) => {
           theme="colored"
           type="button"
         />
-      </div>
-      <div className="votes">
+      </Votes>
+      <Votes>
         <Button
           onClick={() => {
             setModalToken(token);
@@ -102,8 +101,8 @@ const Coin = (props) => {
           theme="translucent"
           type="button"
         />
-      </div>
-    </div>
+      </Votes>
+    </Container>
   );
 };
 
