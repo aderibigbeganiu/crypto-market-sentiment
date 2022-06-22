@@ -65,12 +65,12 @@ const App = () => {
       fetchTokenPrice();
     }
   });
+
   return (
     <>
       <div className="header">
         <div className="logo">
           <img src={logo} alt="logo" height={50} />
-          {/* <span className="logo-text">Sentiment</span> */}
         </div>
         <ConnectButton />
       </div>
