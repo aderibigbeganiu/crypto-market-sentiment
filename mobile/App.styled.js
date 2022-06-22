@@ -9,7 +9,7 @@ export const HeaderStyle = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 70;
+  height: 70px;
   padding-block: 10px;
   background-color: antiquewhite;
   /* box-shadow: #bbad9b 0px 0px 20px 0px; */
@@ -21,7 +21,6 @@ export const HeaderStyle = styled.View`
 export const LogoStyle = styled.Image`
   display: flex;
   align-items: center;
-  cursor: pointer;
   margin-left: 16px;
   height: 50px;
   width: 83px;

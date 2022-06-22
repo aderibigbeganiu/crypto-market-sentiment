@@ -11,7 +11,6 @@ export const Token = styled.Text`
   color: black;
   font-size: 30px;
   font-weight: bold;
-  margin-block: 20px;
 `;
 
 export const Circle = styled.View`
