@@ -20,7 +20,7 @@ const Coin = (props) => {
 
   async function vote(upDown) {
     let options = {
-      contractAddress: process.env.CONTRACT_ADDRESS,
+      contractAddress: process.env.REACT_APP_CONTRACT_ADDRESS,
       functionName: "vote",
       abi: [
         {
